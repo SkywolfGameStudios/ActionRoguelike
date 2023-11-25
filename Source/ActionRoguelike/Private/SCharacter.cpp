@@ -26,6 +26,10 @@ void ASCharacter::BeginPlay()
 	
 }
 
+void ASCharacter::MoveForward(float Value)
+{
+}
+
 // Called every frame
 void ASCharacter::Tick(float DeltaTime)
 {
