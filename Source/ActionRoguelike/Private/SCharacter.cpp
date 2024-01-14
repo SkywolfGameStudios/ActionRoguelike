@@ -28,6 +28,7 @@ void ASCharacter::BeginPlay()
 
 void ASCharacter::MoveForward(float Value)
 {
+	AddMovementInput(GetActorForwardVector(), Value);
 }
 
 // Called every frame
@@ -42,7 +43,7 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAction("MoveForward", this, &ASCharacter::MoveForward);
+	PlayerInputComponent->BindAxis("MoveForward", this, &ASCharacter::MoveForward);
 
 }
 
